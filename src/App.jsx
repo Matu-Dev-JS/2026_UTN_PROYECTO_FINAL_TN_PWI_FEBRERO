@@ -11,6 +11,7 @@ function App() {
 
     return (
         <div>
+            <img src='/vite.svg' />
             <ContactsContextProvider >
                 <Routes>
                     <Route
