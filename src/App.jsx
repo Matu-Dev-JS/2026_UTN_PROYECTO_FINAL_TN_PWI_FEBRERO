@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Route, Routes } from 'react-router'
 import HomeScreen from './Screens/HomeScreen/HomeScreen'
 import ContactScreen from './Screens/ContactScreen/ContactScreen'
@@ -9,9 +9,29 @@ import ContactsContextProvider from './Context/ContactsContext'
 
 function App() {
 
-    
+    const [counter, setCounter] = useState(0)
+    function increment (){
+        setCounter(
+            (currentCounterValue) => {
+                return currentCounterValue + 1
+            }
+        )
+        setCounter(
+            (currentCounterValue) => {
+                return currentCounterValue + 1
+            }
+        )
+        setCounter(
+            (currentCounterValue) => {
+                return currentCounterValue + 1
+            }
+        )
+    }
     return (
         <div>
+
+            <span>Contador: {counter}</span>
+            <button onClick={increment}>Incrementar</button>    
             <img src='/vite.svg' />
             <ContactsContextProvider >
                 <Routes>
